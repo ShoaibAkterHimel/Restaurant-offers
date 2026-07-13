@@ -1,0 +1,55 @@
+name: Daily Banasree restaurant offer scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 9:15 AM Bangladesh time = 3:15 AM UTC
+    - cron: "15 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: banasree-offer-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+
+      - name: Install Chromium
+        run: playwright install --with-deps chromium
+
+      - name: Scan restaurant offer sources
+        run: python src/scan.py
+
+      - name: Build mobile dashboard
+        run: python src/render.py
+
+      - name: Send optional Telegram notification
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python src/notify_telegram.py
+
+      - name: Save results
+        run: |
+          git config user.name "banasree-offer-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet || git commit -m "Daily Banasree offer scan"
+          git push
