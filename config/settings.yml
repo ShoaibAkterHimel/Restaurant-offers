@@ -1,0 +1,11 @@
+project_title: Banasree Restaurant Offer Monitor
+area: Banasree, Dhaka
+timezone: Asia/Dhaka
+minimum_confidence: 4
+maximum_snippet_length: 360
+request_delay_seconds: 1.0
+social_monitoring:
+  enabled: true
+  public_pages_only: true
+  allow_login: false
+  allow_captcha_bypass: false
