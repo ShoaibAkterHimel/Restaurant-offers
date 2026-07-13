@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>Banasree Restaurant Offer Monitor</title>
+  <style>
+    :root {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+      color: #172033;
+      background: #f4f6f8;
+      line-height: 1.45;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header {
+      background: #111827;
+      color: white;
+      padding: 26px 20px;
+    }
+    header > div, main { max-width: 1400px; margin: auto; }
+    h1 { margin: 0 0 5px; font-size: clamp(24px, 4vw, 38px); }
+    h2 { margin-top: 34px; }
+    .subtle { color: #6b7280; }
+    header .subtle { color: #cbd5e1; }
+    main { padding: 20px; }
+    .notice {
+      background: #fff8d8;
+      border: 1px solid #ead783;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 18px 0;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin: 18px 0;
+    }
+    .card {
+      background: white;
+      border: 1px solid #dfe4ea;
+      border-radius: 13px;
+      padding: 15px;
+    }
+    .number { font-size: 29px; font-weight: 800; }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 16px 0;
+    }
+    input, select {
+      padding: 10px 12px;
+      border: 1px solid #cbd2da;
+      border-radius: 9px;
+      background: white;
+      font: inherit;
+    }
+    input { flex: 1; min-width: 230px; }
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+    }
+    .offer {
+      background: white;
+      border: 1px solid #dfe4ea;
+      border-radius: 14px;
+      padding: 16px;
+    }
+    .offer h3 { margin: 9px 0 7px; font-size: 18px; }
+    .badges { display: flex; gap: 6px; flex-wrap: wrap; }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 750;
+      background: #e8edf3;
+    }
+    .detected { background: #dff7e8; color: #126b38; }
+    .needs-review { background: #fff1c7; color: #765600; }
+    .expired { background: #eceff2; color: #596575; }
+    .new { background: #e6edff; color: #204ba2; }
+    .social-public { background: #f0e8ff; color: #6738a5; }
+    .foodpanda-area, .foodpanda-vendor { background: #ffe3f0; color: #9a2459; }
+    .meta { font-size: 13px; color: #667085; margin-top: 8px; }
+    a { color: #1858b7; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .table-wrap {
+      overflow-x: auto;
+      background: white;
+      border: 1px solid #dfe4ea;
+      border-radius: 13px;
+    }
+    table { border-collapse: collapse; width: 100%; min-width: 900px; }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #edf0f3;
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+    th { background: #fafbfc; }
+    .source-ok { color: #126b38; font-weight: 700; }
+    .source-bad { color: #981b1b; font-weight: 700; }
+    .empty {
+      padding: 26px;
+      text-align: center;
+      background: white;
+      border: 1px solid #dfe4ea;
+      border-radius: 13px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Banasree Restaurant Offer Monitor</h1>
+    <div class="subtle">Banasree, Dhaka · Last scan: Not run yet</div>
+  </div>
+</header>
+<main>
+  <div class="notice">
+    “Detected” means the source currently contains a strong offer signal. Check the linked source before travelling or ordering. Social pages can be blocked or show incomplete public content.
+  </div>
+
+  <section class="cards">
+    <div class="card"><div class="subtle">Detected offers</div><div class="number">0</div></div>
+    <div class="card"><div class="subtle">New today</div><div class="number">0</div></div>
+    <div class="card"><div class="subtle">Needs review</div><div class="number">0</div></div>
+    <div class="card"><div class="subtle">Sources working</div><div class="number">0/0</div></div>
+    <div class="card"><div class="subtle">Blocked/failed</div><div class="number">0</div></div>
+  </section>
+
+  <h2>Offer candidates</h2>
+  <div class="controls">
+    <input id="offerSearch" placeholder="Search restaurant, offer, code, condition...">
+    <select id="offerStatus">
+      <option value="">All statuses</option>
+      <option>DETECTED</option>
+      <option>NEEDS REVIEW</option>
+      <option>EXPIRED</option>
+    </select>
+    <select id="offerSource">
+      <option value="">All sources</option>
+      <option value="foodpanda">Foodpanda</option>
+      <option value="social">Facebook / Instagram</option>
+      <option value="website">Website</option>
+    </select>
+  </div>
+
+  
+  <div class="empty">No scan results yet. Run the GitHub Actions workflow once.</div>
+  
+
+  <h2>Source health</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Status</th><th>Source</th><th>Restaurant</th><th>Offers</th><th>Message</th><th>Link</th></tr>
+      </thead>
+      <tbody>
+      
+      </tbody>
+    </table>
+  </div>
+</main>
+<script>
+const search = document.querySelector('#offerSearch');
+const status = document.querySelector('#offerStatus');
+const source = document.querySelector('#offerSource');
+const cards = [...document.querySelectorAll('#offers .offer')];
+
+function filterOffers() {
+  const q = (search?.value || '').toLowerCase();
+  const st = status?.value || '';
+  const src = source?.value || '';
+  cards.forEach(card => {
+    const sourceMatch =
+      !src ||
+      (src === 'foodpanda' && card.dataset.source.startsWith('foodpanda')) ||
+      (src === 'social' && card.dataset.source === 'social_public') ||
+      (src === 'website' && card.dataset.source === 'website');
+    card.hidden = !(
+      card.dataset.text.includes(q) &&
+      (!st || card.dataset.status === st) &&
+      sourceMatch
+    );
+  });
+}
+[search, status, source].forEach(el => el?.addEventListener('input', filterOffers));
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js').catch(() => {});
+}
+</script>
+</body>
+</html>

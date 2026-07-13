@@ -1,0 +1,15 @@
+source_id,restaurant_name,scope,source_type,url,render_mode,active,notes
+foodpanda-banasree,Foodpanda Banasree area,Delivers to Banasree,foodpanda_area,https://www.foodpanda.com.bd/city/dhaka/area/banasree,browser,yes,Discovers visible restaurant discounts in the Banasree delivery area
+takeout-fp,Takeout - Banasree,Banasree branch,foodpanda_vendor,https://www.foodpanda.com.bd/restaurant/svac/takeout-banasree,browser,yes,Official Foodpanda vendor page
+food-king-fp,Food King - Banasree,Banasree branch,foodpanda_vendor,https://www.foodpanda.com.bd/restaurant/gblv/food-king-banasree,browser,yes,Official Foodpanda vendor page
+tasty-treat-fp,Tasty Treat - South Banasree 2,South Banasree branch,foodpanda_vendor,https://www.foodpanda.com.bd/restaurant/xymw/tasty-treat-south-banasree-2,browser,yes,Official Foodpanda vendor page
+cha-chill-fp,Cha & Chill - Banasree,Banasree branch,foodpanda_vendor,https://www.foodpanda.com.bd/restaurant/dj9h/cha-and-chill-banasree-dj9h,browser,yes,Official Foodpanda vendor page
+vitale-fp,Vitale Restaurant & Party Center,Banasree branch,foodpanda_vendor,https://www.foodpanda.com.bd/restaurant/upvq/vitale-restaurant-and-party-center,browser,yes,Official Foodpanda vendor page
+takeout-web,Takeout - Banasree,Banasree branch,website,https://bdtakeout.com/,auto,yes,Chain website may contain campaign information
+takeout-facebook,Takeout - Banasree,Banasree branch,social_public,https://www.facebook.com/bdtakeout/,browser,yes,Experimental public Facebook monitoring; may be blocked by login wall
+takeout-instagram,Takeout - Banasree,Banasree branch,social_public,https://www.instagram.com/takeoutbd/,browser,yes,Experimental public Instagram monitoring; may be blocked by login wall
+vitale-facebook,Vitale Restaurant & Party Center,Banasree branch,social_public,https://www.facebook.com/vitalerestaurantandpartycenter/,browser,yes,Experimental public Facebook monitoring
+vitale-instagram,Vitale Restaurant & Party Center,Banasree branch,social_public,https://www.instagram.com/vitalerestaurant/,browser,yes,Experimental public Instagram monitoring; verify profile URL
+chilis-facebook,Chilis - Banasree,Banasree branch,social_public,https://www.facebook.com/ChilisBD/,browser,yes,Experimental public Facebook monitoring
+chilis-instagram,Chilis - Banasree,Banasree branch,social_public,https://www.instagram.com/chilis.bd/,browser,yes,Experimental public Instagram monitoring
+el-cardo-facebook,El Cardo Banasree,Banasree branch,social_public,https://www.facebook.com/elcardobanasre/,browser,yes,Experimental public Facebook monitoring

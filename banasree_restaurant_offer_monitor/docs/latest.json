@@ -1,0 +1,17 @@
+{
+  "project_title": "Banasree Restaurant Offer Monitor",
+  "area": "Banasree, Dhaka",
+  "generated_at": "Not run yet",
+  "summary": {
+    "sources_total": 0,
+    "sources_ok": 0,
+    "sources_blocked": 0,
+    "sources_failed": 0,
+    "offers_detected": 0,
+    "needs_review": 0,
+    "expired": 0,
+    "new_today": 0
+  },
+  "offers": [],
+  "source_statuses": []
+}
