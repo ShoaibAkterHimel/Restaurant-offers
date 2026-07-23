@@ -1,7 +1,7 @@
 {
   "project_title": "Banasree Restaurant Offer Monitor",
   "area": "Banasree, Dhaka",
-  "generated_at": "2026-07-22T12:03:41+06:00",
+  "generated_at": "2026-07-23T12:09:01+06:00",
   "summary": {
     "sources_total": 14,
     "sources_ok": 0,
@@ -15,7 +15,7 @@
   "offers": [],
   "source_statuses": [
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "foodpanda-banasree",
       "restaurant_name": "Foodpanda Banasree area",
       "scope": "Delivers to Banasree",
@@ -29,7 +29,7 @@
       "message": "Blocked by robots.txt: https://www.foodpanda.com.bd/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "takeout-fp",
       "restaurant_name": "Takeout - Banasree",
       "scope": "Banasree branch",
@@ -43,7 +43,7 @@
       "message": "Blocked by robots.txt: https://www.foodpanda.com.bd/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "food-king-fp",
       "restaurant_name": "Food King - Banasree",
       "scope": "Banasree branch",
@@ -57,7 +57,7 @@
       "message": "Blocked by robots.txt: https://www.foodpanda.com.bd/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "tasty-treat-fp",
       "restaurant_name": "Tasty Treat - South Banasree 2",
       "scope": "South Banasree branch",
@@ -71,7 +71,7 @@
       "message": "Blocked by robots.txt: https://www.foodpanda.com.bd/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "cha-chill-fp",
       "restaurant_name": "Cha & Chill - Banasree",
       "scope": "Banasree branch",
@@ -85,7 +85,7 @@
       "message": "Blocked by robots.txt: https://www.foodpanda.com.bd/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "vitale-fp",
       "restaurant_name": "Vitale Restaurant & Party Center",
       "scope": "Banasree branch",
@@ -99,7 +99,7 @@
       "message": "Blocked by robots.txt: https://www.foodpanda.com.bd/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "takeout-web",
       "restaurant_name": "Takeout - Banasree",
       "scope": "Banasree branch",
@@ -113,7 +113,7 @@
       "message": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "takeout-facebook",
       "restaurant_name": "Takeout - Banasree",
       "scope": "Banasree branch",
@@ -127,7 +127,7 @@
       "message": "Blocked by robots.txt: https://www.facebook.com/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "takeout-instagram",
       "restaurant_name": "Takeout - Banasree",
       "scope": "Banasree branch",
@@ -141,7 +141,7 @@
       "message": "Blocked by robots.txt: https://www.instagram.com/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "vitale-facebook",
       "restaurant_name": "Vitale Restaurant & Party Center",
       "scope": "Banasree branch",
@@ -155,7 +155,7 @@
       "message": "Blocked by robots.txt: https://www.facebook.com/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "vitale-instagram",
       "restaurant_name": "Vitale Restaurant & Party Center",
       "scope": "Banasree branch",
@@ -169,7 +169,7 @@
       "message": "Blocked by robots.txt: https://www.instagram.com/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "chilis-facebook",
       "restaurant_name": "Chilis - Banasree",
       "scope": "Banasree branch",
@@ -183,7 +183,7 @@
       "message": "Blocked by robots.txt: https://www.facebook.com/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "chilis-instagram",
       "restaurant_name": "Chilis - Banasree",
       "scope": "Banasree branch",
@@ -197,7 +197,7 @@
       "message": "Blocked by robots.txt: https://www.instagram.com/robots.txt"
     },
     {
-      "run_at": "2026-07-22T12:03:41+06:00",
+      "run_at": "2026-07-23T12:09:01+06:00",
       "source_id": "el-cardo-facebook",
       "restaurant_name": "El Cardo Banasree",
       "scope": "Banasree branch",
